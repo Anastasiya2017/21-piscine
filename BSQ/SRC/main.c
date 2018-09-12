@@ -6,7 +6,7 @@
 /*   By: tlubowit <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/10 23:25:49 by tlubowit          #+#    #+#             */
-/*   Updated: 2018/09/11 22:23:28 by tlubowit         ###   ########.fr       */
+/*   Updated: 2018/09/12 22:05:58 by tlubowit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 int		main(void)
 {
-	int n = 10;
+	int n = 100;
+	int m = n - 20;
 	char empty = '.';
 	char barrier = 'o';
 	char **arr;
@@ -26,13 +27,13 @@ int		main(void)
 	int k = 0;
 	int ran;
 
-	arr = (char**)malloc(n * sizeof(char*));
-	for (k = 0; k < n; k++)
+	arr = (char**)malloc(m * sizeof(char*));
+	for (k = 0; k < m; k++)
 	{
 		arr[k] = (char*)malloc(n * sizeof(char) + 1);
 	}
 	srand(time(NULL));
-	while (i < n)
+	while (i < m)
 	{
 		while (j < n)
 		{
@@ -54,7 +55,7 @@ int		main(void)
 	i = 0;
 	j = 0;
 
-	while (i < n)
+	while (i < m)
 	{
 		while (j < n)
 		{
